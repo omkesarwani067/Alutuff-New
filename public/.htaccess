@@ -1,0 +1,19 @@
+Options -MultiViews
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Serve pre-rendered route HTML for extensionless URLs.
+  RewriteRule ^$ index.html [L]
+  RewriteRule ^(home|about|established|product|projects|career|news|testReport|certificates|contact|catalogues|dealer|blog)/?$ $1/index.html [L]
+  RewriteRule ^blog/([A-Za-z0-9-]+)/?$ blog/$1/index.html [L]
+
+  # Existing files/directories are served normally.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Intentionally no SPA fallback: unknown URLs should return a real 404.
+</IfModule>

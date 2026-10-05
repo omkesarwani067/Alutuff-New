@@ -1,0 +1,64 @@
+/* Cards Container */
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+/* Single Card */
+.contact-card {
+  background-color: #fff;
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.contact-icon {
+  font-size: 35px;
+  color: #ea3138;
+  margin-bottom: 15px;
+}
+
+/* Google Map Container */
+.map-container {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 350px;
+}
+.map-form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.google-map {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/* Responsive (only layout-specific) */
+@media screen and (max-width: 768px) {
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .map-form-wrapper {
+    flex-direction: column-reverse; /* show form first */
+  }
+  .map-container {
+    margin-bottom: 20px;
+  }
+
+  .google-map {
+    height: 276px;
+  }
+}

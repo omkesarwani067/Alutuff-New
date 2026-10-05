@@ -1,0 +1,61 @@
+{
+  "name": "alutuff-recovered",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-countup": "^6.5.3",
+    "react-dom": "^18.3.1",
+    "react-ga4": "^2.1.0",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.3.0",
+    "react-intersection-observer": "^9.13.0",
+    "react-router-dom": "^6.26.2",
+    "react-slick": "^0.30.2",
+    "recharts": "^2.12.7",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.14.0",
+    "swiper": "^11.1.12"
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1",
+    "react-snap": "^1.23.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postbuild": "react-snap"
+  },
+  "reactSnap": {
+    "source": "build",
+    "inlineCss": true,
+    "minifyHtml": true,
+    "skipThirdPartyRequests": false,
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "include": [
+      "/",
+      "/home",
+      "/about",
+      "/established",
+      "/product",
+      "/projects",
+      "/career",
+      "/news",
+      "/testReport",
+      "/certificates",
+      "/contact",
+      "/catalogues",
+      "/dealer",
+      "/blog",
+      "/blog/why-acp-panels-are-so-popular-in-modern-architecture",
+      "/blog/best-acp-sheets-in-india"
+    ]
+  }
+}

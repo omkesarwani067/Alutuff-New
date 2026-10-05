@@ -1,0 +1,362 @@
+import React,{useState} from 'react'
+import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap'
+import { FaChevronDown, FaChevronUp, FaCheckCircle } from "react-icons/fa";
+import Slider from 'react-slick';
+import Testimonial from "../components/Testimonial"
+import { FaRocket, FaLeaf, FaCogs, FaUsers } from 'react-icons/fa';
+import Banner from '../components/Banner';
+const bannerImage = '/static/media/1400.5b998818e97ff18c5b37.jpg';import CareerForm from '../components/CareerForm';
+import OpenPosition from "../components/OpenPosition"
+import "./Career.css"
+import CareerRealLifeSlider from '../components/CareerRealLifeSlider';
+import { Helmet } from 'react-helmet-async';
+
+const boxData = [
+  {
+    title: "Limitless Growth Opportunities.",
+    description: "Learn, lead, and grow in a high-impact environment.",
+  },
+  {
+    title: "Culture of Innovation.",
+    description: "Your ideas drive transformation.",
+  },
+  {
+    title: "Supportive Leadership.",
+    description: "Be mentored by leaders who empower and inspire.",
+  },
+  {
+    title: "Ownership and Impact.",
+    description: "Take charge, drive results, and shape your journey.",
+  },
+  {
+    title:
+      "Work-Life Integration at Alutuff.",
+    description:
+      "At Alutuff, we understand the importance of a healthy work-life balance. Our flexible policies and supportive culture help employees harmonize their personal and professional lives. We foster an environment where well-being and productivity go hand in hand.",
+  },
+  {
+    title: "Reward and Recognition.",
+    description:
+      "We believe in celebrating excellence. Alutuff's reward and recognition programs are designed to appreciate the efforts of our people, motivating them to reach new heights. Every achievement, big or small, is valued and acknowledged.",
+  },
+];
+
+const benefitsData = [
+  {
+    title: "Medical Insurance",
+    description: "At Alutuff, we prioritize the well-being of our employees because we believe their health is just as important as their performance."
+  },
+  {
+    title: "Training and Development",
+    description: "Our structured programs—led by experts—focus on enhancing communication, sales, and personality development skills."
+  },
+  {
+    title: "Team Building Activities",
+    description: "We foster camaraderie through team-building games, outings, lunches, and contests to create a collaborative culture."
+  },
+  {
+    title: "Career Growth Opportunities",
+    description: "We support internal promotions and long-term growth through mentorship and structured development paths."
+  }
+];
+
+const testimonialsData = [
+  {
+    name: "Amit Sharma",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    review: "The product quality is top-notch. I've been using it for months now without any issues. Highly recommend!",
+  },
+  {
+    name: "Priya Mehta",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    review: "Excellent customer service and on-time delivery. A trustworthy brand with years of experience.",
+  },
+  {
+    name: "Ravi Kumar",
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    review: "They offer unmatched quality in this segment. Will definitely come back for future projects.",
+  },
+  {
+    name: "Sneha Agarwal",
+    image: "https://randomuser.me/api/portraits/women/50.jpg",
+    review: "Amazing experience! The team was very cooperative and guided us at every step.",
+  },
+  {
+    name: "Vikas Jain",
+    image: "https://randomuser.me/api/portraits/men/40.jpg",
+    review: "Reliable and consistent. They have delivered on their promises every time we've worked with them.",
+  },
+  {
+    name: "Neha Kapoor",
+    image: "https://randomuser.me/api/portraits/women/47.jpg",
+    review: "Superb design and long-lasting build quality. I would recommend them to anyone looking for premium work.",
+  },
+];
+
+const values = [
+{
+  img: '/static/media/team.0dc1a440795178e9e649.png',
+  title: 'Teamwork',
+  desc: 'Collaboration is at the core of our success.'
+},
+  {
+    img: '/static/media/exellent.3d315dee866499e7d97c.png',
+    title: 'EXellence',
+    desc: 'Not just a goal, but our everyday standard.'
+  },
+  {
+    img: '/static/media/empowerment.768f3af107d156b1b747.png',
+    title: 'Empowerment',
+    desc: 'Freedom to lead, act, and make a difference.'
+  },
+
+    {
+   img: '/static/media/accountability.b735470b69e8310101a2.png',
+    title: 'Accountability',
+    desc: 'We own our work and deliver results.'
+  },
+  {
+    img: '/static/media/int.5324c41d06f9e0fa56bb.png',
+    title:'Integrity',
+ desc:"We do what's truly right - always",
+  },
+  {
+    img: '/static/media/opportunity.b92e396597462eccce89.png',
+    title: 'Opportunity',
+ desc: 'For growth, leadership, and continuous learning',
+  },
+  {
+    img: '/static/media/respect.c1ac47db545eeaf56547.png',
+    title: ' Care & Respect',
+ desc: 'For people, partnerships, and the planet',
+  },
+    {
+    img: '/static/media/potential.092af40d9433cee9bfa0.png',
+    title: '  Potential',
+ desc: 'Unlock your highest capabilities with our support',
+  },
+ 
+
+
+
+  // Add more as needed
+];
+
+const Career = () => {
+    const [openIndex, setOpenIndex] = useState(null);
+const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const toggleBox = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+  // -------------core-values-slider--------------
+      const settings = {
+    infinite: true,
+    speed: 5000,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: false,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: { slidesToShow: 2 }
+      },
+      {
+        breakpoint: 576,
+        settings: { slidesToShow: 1 }
+      }
+    ]
+  };
+      const [expanded, setExpanded] = useState(false);
+  
+
+return (
+    
+    <>
+<Helmet>
+  <title>Careers at Alutuff | ACP Manufacturing Jobs in India</title>
+
+  <meta
+    name="description"
+    content="Join Alutuff and build your career in ACP aluminium composite panel manufacturing with opportunities across India."
+  />
+
+  <link rel="canonical" href="https://alutuff.in/career" />
+  <meta name="robots" content="index, follow" />
+</Helmet>
+
+
+
+      {/* Banner Section */}
+  <div className='w-100' >
+          <Banner
+            image={bannerImage}
+            heading="Careers At Alutuff "
+            subheading="Welcome to our website"
+          />
+        </div>
+
+     {/*  */}
+
+  <Container fluid className="career-message-section">
+      <Container className="career-message-content-div">
+        <div className="career-box">
+          <div className="career-heading-wrapper">
+            <h2 className="career-heading">Message from the Director's Desk</h2>
+            <div className="heading-bar"></div>
+          </div>
+          <p className="page-text">
+            At Alutuff ACP, our journey goes far beyond manufacturing Metal Composite Panels — it's about innovation, trust, and driving progress across the architectural and construction industries. With a solid foundation rooted in strong values and a vision to be a global leader, we champion quality, sustainability, and people-focused growth.
+            <br /><br />
+            {expanded && (
+              <>
+                From next-generation technologies to eco-conscious practices like zero-waste manufacturing and green certifications, we are proud of our relentless pursuit of excellence. Yet, our greatest strength lies in our people — the innovators, creators, and problem-solvers who bring our mission to life every day.
+                <br /><br />
+                We're not just building products. We're building possibilities — for a smarter, more sustainable world.
+              </>
+            )}
+          </p>
+          <div className="readmore-bar" onClick={() => setExpanded(!expanded)}>
+            <span>{expanded ? "Read Less" : "Read More"}</span>
+            {expanded ? <FaChevronUp /> : <FaChevronDown />}
+          </div>
+        </div>
+
+        {/* Duplicate box - Add your own heading/content here */}
+        <div className="career-box">
+          <div className="career-heading-wrapper">
+            <h2 className="career-heading">Message from the HR Desk</h2>
+            <div className="heading-bar"></div>
+          </div>
+          <p className="page-text">
+          At Alutuff, we believe our people are the true catalysts of our success. The HR vision is simple — to cultivate a workplace that is professionally rewarding and personally meaningful.<br/> <br/>
+          We invest in our team through continuous learning, open communication, and leadership development, ensuring that every individual is empowered to grow and thrive.
+          {expanded && (
+            <>
+           We nurture a culture of transparency, innovation, and inclusivity where every voice matters. The HR Team at Alutuff believes in mantra "Employee's first" & hence we will always go extra mile for you to make our association productive & each milestone enjoyable.<br/> <br/>
+        If you're seeking a workplace where your skills are celebrated, your ideas matter, and your growth is taken seriously — Alutuff is the place for you.<br/><br/>
+        Enjoy the journey at Atutuff !
+            </>
+            )}
+          </p>
+            <div className="readmore-bar" onClick={() => setExpanded(!expanded)}>
+            <span className='read-more'>{expanded ? "Read Less" : "Read More"}</span>
+            {expanded ? <FaChevronUp /> : <FaChevronDown />}
+          </div>
+        </div>
+      </Container>
+    </Container>
+
+<div className='container' style={{width:"65%",height:"5px",backgroundColor:"#333333",borderRadius:"15px",marginTop:"2.5%"}}></div>
+    
+     <Container fluid className="career-center-card-section">
+      <Container className="career-center-card">
+        <div className='text-center mx-auto'>
+            <h2 className="page-heading text-center mx-auto" >Build The Future with Us</h2>
+        </div>
+      
+        <p className="page-text">
+          At the core of Alutuff is a commitment to cutting-edge innovation and responsible practices. 
+          Our premium ACP panels are crafted using world-class technologies that ensure exceptional 
+          durability, weather resistance, and aesthetic appeal.
+          <br /><br />
+          As part of our sustainability journey, we adhere to global environmental benchmarks, 
+          delivering products that are not only high-performing but also eco-conscious. 
+          Whether it's redefining façade design or advancing interior solutions, we're always 
+          setting new standards.
+          <br /><br />
+          Join us to be a part of a future-forward company where bold thinking meets real-world impact.
+        </p>
+      </Container>
+    </Container>
+    
+
+        <Container fluid className="values-career-section">
+          <div className='d-flex justify-content-center align-items-center mb-5 '>
+        <p className="page-heading">OUR CORE VALUES</p>
+      </div>
+      <Slider {...settings} >
+        {values.map((value, idx) => (
+          <div className="values-career-card" key={idx}>
+             <div className="icon-div">
+    <img className='core-icons' src={value.img} alt={value.title} />
+  </div>
+            <h4>{value.title}</h4>
+            <p>{value.desc}</p>
+          </div>
+        ))}
+      </Slider>
+    </Container>
+<div className='container' style={{width:"65%",height:"5px",backgroundColor:"#333333",borderRadius:"15px",marginTop:"2.5%"}}></div>
+      
+{/* life at alutuff slider */}
+<CareerRealLifeSlider/>
+{/*  */}
+
+      <section className="benefits-section">
+  
+      <div className="benefits-overlay">
+                     <div style={{margin:"auto"}}>
+        <h2 className="page-heading benefit-heading" >Benefit & Perks</h2>
+        </div>
+        <div className="benefits-wrapper">
+          {benefitsData.map((benefit, index) => (
+            <div key={index} className="benefits-box">
+              <h3 className="benefits-title">{benefit.title}</h3>
+              <p className="benefits-description">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+        <div className="whywork-section">
+      <div className="text-center">
+        <h2 className="page-heading">Why Work With Alutuff?</h2>
+      </div>
+      <p className="whywork-description">
+        At Alutuff, we don't just offer jobs — we build careers with purpose and passion.
+        As a dynamic, fast-growing organization, here's what you can expect:
+      </p>
+
+ <div className="whywork-grid">
+        {boxData.map((item, index) => (
+          <div className="info-box" key={index}>
+            <div className="info-box-header" onClick={() => toggleBox(index)}>
+              <div className="header-content">
+                <FaCheckCircle className="icon" />
+                <span className="header-text">{item.title}</span>
+              </div>
+              <div className="right-icon">
+                {openIndex === index ? (
+                  <FaChevronUp className="dropdown-icon" />
+                ) : (
+                  <FaChevronDown className="dropdown-icon" />
+                )}
+              </div>
+            </div>
+
+            {openIndex === index && (
+              <div className="info-box-description">{item.description}</div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+ 
+      <Testimonial testimonials={testimonialsData} />
+<OpenPosition/>
+
+<CareerForm className="mt-3"/>
+  
+
+   </>
+  )
+}
+
+export default Career

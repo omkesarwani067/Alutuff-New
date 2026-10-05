@@ -1,0 +1,138 @@
+.quote-section {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+
+.quote-box {
+  padding: 5% 25px !important;
+    height: 100%;
+  background-color: white;
+  width: 70%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.quote-left {
+  flex: 1;
+  max-width: 45%;
+}
+
+.quote-left h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #333;
+}
+
+.quote-left p {
+  color: #666;
+  font-size: 18px;
+  margin-top: 1rem;
+  margin-bottom: 2.1rem !important;
+}
+
+.quote-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.icon-circle {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  margin-top: 10px;
+  text-align: center;
+ 
+}
+
+.say-hello {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  font-size: 22px;
+}
+
+.phone-number {
+  color: #555;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .quote-box {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    height: auto;
+  }
+
+  .quote-left,
+  .quote-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .quote-left h3 {
+    font-size: 6vw !important; /* More readable on mobile */
+  }
+
+  .quote-left p {
+    font-size: 4.2vw;
+    margin: 1rem 0;
+  }
+
+  .catalogue-link {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    font-size: 4vw;
+    margin-top: 0;
+  }
+
+  .quote-right {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .icon-circle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-text {
+    margin-top: 5px;
+  }
+
+  .say-hello,
+  .phone-number {
+    font-size: 4vw;
+  }
+}
+

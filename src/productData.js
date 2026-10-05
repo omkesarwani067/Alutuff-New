@@ -1,0 +1,101 @@
+const productData = [
+  // wooden Prime
+{ id: 1, category: 'Wooden Prime', image: '/static/media/ATF101-ROSE-WOOD.cd7c3f80b52654461d57.jpg', title: 'WOODEN PRIME', description: 'ATF 101 Rose Wood', text: 'High Quality | Long Lasting | Durable' },
+{ id: 2, category: 'Wooden Prime', image: '/static/media/ATF119-RUSTIC-WOOD.1cda4e9fab94dd46caa2.jpg', title: 'WOODEN PRIME', description: 'ATF 119 Rustic Wood', text: 'High Quality | Long Lasting | Durable' },
+{ id: 3, category: 'Wooden Prime', image: '/static/media/ATF123-ROYAL-TEAK.a035cf7e7e79e643199e.jpg', title: 'WOODEN PRIME', description: 'ATF 123 Royal Teak', text: 'High Quality | Long Lasting | Durable' },
+{ id: 4, category: 'Wooden Prime', image: '/static/media/ATF124-NATURAL-TEAK.94bc52f0cfc2f5d1ce21.jpg', title: 'WOODEN PRIME', description: 'ATF 124 Natural Teak', text: 'High Quality | Long Lasting | Durable' },
+{ id: 5, category: 'Wooden Prime', image: '/static/media/recovered-placeholder.png', title: 'WOODEN PRIME', description: 'ATF 128 Dark Wangy', text: 'High Quality | Long Lasting | Durable' },
+{ id: 6, category: 'Wooden Prime', image: '/static/media/ATF132-AMAZONIAN-FOREST.9b43a3a222ba0dae2aa0.jpg', title: 'WOODEN PRIME', description: 'ATF 132 Amazonian Forest', text: 'High Quality | Long Lasting | Durable' },
+{ id: 7, category: 'Wooden Prime', image: '/static/media/ATF-142-BALINESE-TEAK.1087d4baeacdd020cb46.jpg', title: 'WOODEN PRIME', description: 'ATF 142 Balinese Teak', text: 'High Quality | Long Lasting | Durable' },
+{ id: 8, category: 'Wooden Prime', image: '/static/media/ATF-144-OAK-PINE.b5f1027fe9cb471dba09.jpg', title: 'WOODEN PRIME', description: 'ATF 144 Oak Pine', text: 'High Quality | Long Lasting | Durable' },
+{ id: 9, category: 'Wooden Prime', image: '/static/media/ATF-145-PREMIUM-MAGHONY.77d409eb477e60d97b83.jpg', title: 'WOODEN PRIME', description: 'ATF 145 Premium Mahogany', text: 'High Quality | Long Lasting | Durable' },
+{ id: 10, category: 'Wooden Prime', image: '/static/media/ATF101-ROSE-WOOD.cd7c3f80b52654461d57.jpg', title: 'WOODEN PRIME', description: 'ATF 101 Rose Wood', text: 'High Quality | Long Lasting | Durable' },
+
+
+ // Marble & Stone
+{ id: 11, category: 'Marble & Stone', image: '/static/media/ATF109-ITALIAN-MARBLE.5f5a857b5aa62a108806.jpg', title: 'MARBLE & STONE', description: 'ATF109-ITALIAN-MARBLE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 12, category: 'Marble & Stone', image: '/static/media/ATF110-BROWN-MARBLE.485dd4ced82018d8cb07.jpg', title: 'MARBLE & STONE', description: 'ATF110-BROWN-MARBLE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 13, category: 'Marble & Stone', image: '/static/media/ATF112-WHITE-GRANITE.223229f8e6ad1a1daf4a.jpg', title: 'MARBLE & STONE', description: 'ATF112-WHITE-GRANITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 14, category: 'Marble & Stone', image: '/static/media/ATF113-BLACK-GRANITE.5c750b795a6ee2711953.jpg', title: 'MARBLE & STONE', description: 'ATF113-BLACK-GRANITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 15, category: 'Marble & Stone', image: '/static/media/ATF122-ANGOLA-BLACK-GRANITE.28da1e1685532d489ed0.jpg', title: 'MARBLE & STONE', description: 'ATF122-ANGOLA-BLACK-GRANITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 16, category: 'Marble & Stone', image: '/static/media/ATF-131-MARBLE-WHITE.356eaac85d798bddf311.jpg', title: 'MARBLE & STONE', description: 'ATF-131-MARBLE-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 17, category: 'Marble & Stone', image: '/static/media/ATF143-STONE-FIRE.ef0b04a38a09b3c2000a.jpg', title: 'MARBLE & STONE', description: 'ATF143-STONE-FIRE', text: 'High Quality | Long Lasting | Durable' },
+
+// Sand Series
+{ id: 18, category: 'Sand Series', image: '/static/media/ATE-01-NIGHT-GREY-SAND.aa0621f7683dbbf1c76f.jpg', title: 'Sand Series', description: 'ATE-01-NIGHT-GREY-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 19, category: 'Sand Series', image: '/static/media/ATE-02-DARK-GREY-SAND.8f38e5415540f945a605.jpg', title: 'Sand Series', description: 'ATE-02-DARK-GREY-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 20, category: 'Sand Series', image: '/static/media/ATE-03-LIGHT-MOON-SAND.de3f97c5e73f52212472.jpg', title: 'Sand Series', description: 'ATE-03-LIGHT-MOON-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 21, category: 'Sand Series', image: '/static/media/ATE-04-BROWN-SAND.cd7b0b719ce1f07a9d9a.jpg', title: 'Sand Series', description: 'ATE-04-BROWN-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 22, category: 'Sand Series', image: '/static/media/ATE-05-RED-WINE-SAND.89e64d689061d1697465.jpg', title: 'Sand Series', description: 'ATE-05-RED-WINE-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 23, category: 'Sand Series', image: '/static/media/ATE-06-GREEN-SAND.79ea7daafb0fa76eb485.jpg', title: 'Sand Series', description: 'ATE-06-GREEN-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 24, category: 'Sand Series', image: '/static/media/ATE-07-MULTAAN-SAND.c3d44536e51f7f73725c.jpg', title: 'Sand Series', description: 'ATE-07-MULTAAN-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 25, category: 'Sand Series', image: '/static/media/ATE-08-OFF-WHITE-SAND.8b593c7a2b744fa3a900.jpg', title: 'Sand Series', description: 'ATE-08-OFF-WHITE-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 26, category: 'Sand Series', image: '/static/media/ATE-09-PURE-WHITE-SAND.0a4f43ba28abe49a8bd8.jpg', title: 'Sand Series', description: 'ATE-09-PURE-WHITE-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 27, category: 'Sand Series', image: '/static/media/ATE-10-MILKY-WHITE-SAND.d081c40d19da399bfcf0.jpg', title: 'Sand Series', description: 'ATE-10-MILKY-WHITE-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 28, category: 'Sand Series', image: '/static/media/ATE-11-VOLCANO-SAND.a2521325b44cb747f9c0.jpg', title: 'Sand Series', description: 'ATE-11-VOLCANO-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 29, category: 'Sand Series', image: '/static/media/SAMPLE.8082e247ea5a5d99a6bc.jpg', title: 'Sand Series', description: 'SAMPLE', text: 'High Quality | Long Lasting | Durable' },
+
+
+  // Rustic Series
+{ id: 30, category: 'Rustic Series', image: '/static/media/ATS01-LUNAR-GREY-SAND.6f4f9bf717731421f814.jpg', title: 'Rustic Series', description: 'ATS01-LUNAR-GREY-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 31, category: 'Rustic Series', image: '/static/media/ATS02-TULA-ROSA-WHITE-SAND.5e2090b8490aa2a62432.jpg', title: 'Rustic Series', description: 'ATS02-TULA-ROSA-WHITE-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 32, category: 'Rustic Series', image: '/static/media/ATS03-BASKA-BEACH-SAND.a92836742e08dd5c560f.jpg', title: 'Rustic Series', description: 'ATS03-BASKA-BEACH-SAND', text: 'High Quality | Long Lasting | Durable' },
+
+// Bold Solid
+{ id: 33, category: 'Bold & Solid', image: '/static/media/AT-01-BRIGHT-SILVER.98a008448572eaecb2a5.jpg', title: 'Bold & Solid', description: 'AT-01-BRIGHT-SILVER', text: 'High Quality | Long Lasting | Durable' },
+{ id: 34, category: 'Bold & Solid', image: '/static/media/AT-02-METALLIC-SILVER.fac30a5d0fd72efa5cd6.jpg', title: 'Bold & Solid', description: 'AT-02-METALLIC-SILVER', text: 'High Quality | Long Lasting | Durable' },
+{ id: 35, category: 'Bold & Solid', image: '/static/media/AT-04-CHAMPAGNE-GOLD.ff0e7ea8cd2f5668d542.jpg', title: 'Bold & Solid', description: 'AT-04-CHAMPAGNE-GOLD', text: 'High Quality | Long Lasting | Durable' },
+{ id: 36, category: 'Bold & Solid', image: '/static/media/AT-05-PURE-WHITE.ed4baa4ee8fc90b6158b.jpg', title: 'Bold & Solid', description: 'AT-05-PURE-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 37, category: 'Bold & Solid', image: '/static/media/AT-07-CLASSIC-GOLD.588db07eebc76e98811d.jpg', title: 'Bold & Solid', description: 'AT-07-CLASSIC-GOLD', text: 'High Quality | Long Lasting | Durable' },
+{ id: 38, category: 'Bold & Solid', image: '/static/media/AT-08-BRIGHT-RED.393176d46360fc4fa6c0.jpg', title: 'Bold & Solid', description: 'AT-08-BRIGHT-RED', text: 'High Quality | Long Lasting | Durable' },
+{ id: 39, category: 'Bold & Solid', image: '/static/media/AT-10-SIGNAL-BLUE.56b1dc36351c8e3d8b80.jpg', title: 'Bold & Solid', description: 'AT-10-SIGNAL-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 40, category: 'Bold & Solid', image: '/static/media/AT-11-COPPER-METALLIC.9c5778f092d6d156a36f.jpg', title: 'Bold & Solid', description: 'AT-11-COPPER-METALLIC', text: 'High Quality | Long Lasting | Durable' },
+{ id: 41, category: 'Bold & Solid', image: '/static/media/AT-12-BLACK.5aad8f3b3321dd202251.jpg', title: 'Bold & Solid', description: 'AT-12-BLACK', text: 'High Quality | Long Lasting | Durable' },
+{ id: 42, category: 'Bold & Solid', image: '/static/media/AT-15-PEARL-COPPER.81bd1e17c379f8a740c3.jpg', title: 'Bold & Solid', description: 'AT-15-PEARL-COPPER', text: 'High Quality | Long Lasting | Durable' },
+{ id: 43, category: 'Bold & Solid', image: '/static/media/AT-18-NAVY-BLUE.b04a659b550e72f4d16c.jpg', title: 'Bold & Solid', description: 'AT-18-NAVY-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 44, category: 'Bold & Solid', image: '/static/media/AT-19-TRAFFIC-YELLOW.3c16869c1682fbe9d7e3.jpg', title: 'Bold & Solid', description: 'AT-19-TRAFFIC-YELLOW', text: 'High Quality | Long Lasting | Durable' },
+{ id: 45, category: 'Bold & Solid', image: '/static/media/AT-20-PURE-YELLOW.3872dd69126ba7da94a0.jpg', title: 'Bold & Solid', description: 'AT-20-PURE-YELLOW', text: 'High Quality | Long Lasting | Durable' },
+{ id: 46, category: 'Bold & Solid', image: '/static/media/AT-22-BURGUNDY.a99e2e3e024db745428c.jpg', title: 'Bold & Solid', description: 'AT-22-BURGUNDY', text: 'High Quality | Long Lasting | Durable' },
+{ id: 47, category: 'Bold & Solid', image: '/static/media/AT-25-REFRESHING-ORANGE.fa36411d098f1572e4ae.jpg', title: 'Bold & Solid', description: 'AT-25-REFRESHING-ORANGE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 48, category: 'Bold & Solid', image: '/static/media/AT-26-SILVER-BLACK.0e66557942f20a4d267f.jpg', title: 'Bold & Solid', description: 'AT-26-SILVER-BLACK', text: 'High Quality | Long Lasting | Durable' },
+{ id: 49, category: 'Bold & Solid', image: '/static/media/AT-28-METALLIC-BLUE.b6b3b77685813a836f26.jpg', title: 'Bold & Solid', description: 'AT-28-METALLIC-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 50, category: 'Bold & Solid', image: '/static/media/AT-31-OFF-WHITE.0bdcc23ead572019518e.jpg', title: 'Bold & Solid', description: 'AT-31-OFF-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 51, category: 'Bold & Solid', image: '/static/media/AT-32-COPPER-BRONZE.d8a1cd658b5a117adc0a.jpg', title: 'Bold & Solid', description: 'AT-32-COPPER-BRONZE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 52, category: 'Bold & Solid', image: '/static/media/AT-35-GLOSSY-WHITE.56b49d7849ab443d9fb4.jpg', title: 'Bold & Solid', description: 'AT-35-GLOSSY-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 53, category: 'Bold & Solid', image: '/static/media/AT-41-BRIGHT-GREEN.509f0a13ba74842c1e68.jpg', title: 'Bold & Solid', description: 'AT-41-BRIGHT-GREEN', text: 'High Quality | Long Lasting | Durable' },
+{ id: 54, category: 'Bold & Solid', image: '/static/media/AT-42-LILAC.f3e3b4ee779f21869998.jpg', title: 'Bold & Solid', description: 'AT-42-LILAC', text: 'High Quality | Long Lasting | Durable' },
+{ id: 55, category: 'Bold & Solid', image: '/static/media/AT-46-GLOSSY-BLACK.ad36b9a61176ed0af732.jpg', title: 'Bold & Solid', description: 'AT-46-GLOSSY-BLACK', text: 'High Quality | Long Lasting | Durable' },
+{ id: 56, category: 'Bold & Solid', image: '/static/media/AT-50-SILVER-MIRROR.4cca738b5d4eb4d66942.jpg', title: 'Bold & Solid', description: 'AT-50-SILVER-MIRROR', text: 'High Quality | Long Lasting | Durable' },
+{ id: 57, category: 'Bold & Solid', image: '/static/media/AT-51-GOLD-MIRROR.0d00d7b19b8b8993a43a.jpg', title: 'Bold & Solid', description: 'AT-51-GOLD-MIRROR', text: 'High Quality | Long Lasting | Durable' },
+{ id: 58, category: 'Bold & Solid', image: '/static/media/AT-53-DARK-BRONZE.f895d47ca4955c204343.jpg', title: 'Bold & Solid', description: 'AT-53-DARK-BRONZE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 59, category: 'Bold & Solid', image: '/static/media/AT-54-GLOSSY-RED.587fd0ddae3ad3e35a0b.jpg', title: 'Bold & Solid', description: 'AT-54-GLOSSY-RED', text: 'High Quality | Long Lasting | Durable' },
+{ id: 60, category: 'Bold & Solid', image: '/static/media/AT-60-BRUSH-SILVER.da39d828fadb2d874f45.jpg', title: 'Bold & Solid', description: 'AT-60-BRUSH-SILVER', text: 'High Quality | Long Lasting | Durable' },
+{ id: 61, category: 'Bold & Solid', image: '/static/media/At08-RED.c9e5145ee2a3884b3cad.jpg', title: 'Bold & Solid', description: 'At08-RED', text: 'High Quality | Long Lasting | Durable' },
+{ id: 62, category: 'Bold & Solid', image: '/static/media/At10-SIGNAL-BLUE.a979bff5368413b9d9bb.jpg', title: 'Bold & Solid', description: 'At10-SIGNAL-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 63, category: 'Bold & Solid', image: '/static/media/At11-COPPER-METALLIC.ea912eb89dad103d9274.jpg', title: 'Bold & Solid', description: 'At11-COPPER-METALLIC', text: 'High Quality | Long Lasting | Durable' },
+{ id: 64, category: 'Bold & Solid', image: '/static/media/At18-NAVY-BLUE.876cc313babd11148642.jpg', title: 'Bold & Solid', description: 'At18-NAVY-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 65, category: 'Bold & Solid', image: '/static/media/At25-REFRESHING-ORANGE.0d182d0bac5e79d589fe.jpg', title: 'Bold & Solid', description: 'At25-REFRESHING-ORANGE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 66, category: 'Bold & Solid', image: '/static/media/At31-IVORY.cac84af7dfa1e2924dcd.jpg', title: 'Bold & Solid', description: 'At31-IVORY', text: 'High Quality | Long Lasting | Durable' },
+{ id: 67, category: 'Bold & Solid', image: '/static/media/At33-CHOCOLATE-BROWN.db420842b40fd56603d1.jpg', title: 'Bold & Solid', description: 'At33-CHOCOLATE-BROWN', text: 'High Quality | Long Lasting | Durable' },
+
+// { id: 68, category: 'Partitions', image: '/static/media/recovered-placeholder.png', title: 'Bold Project 36', description: 'Premium Stone Look' },
+
+// partiton
+{ id: 68, category: 'Partitions', image: '/static/media/ATF-123-ROYAL-TEAK.17b9eea5f0eb303550f9.jpg', title: 'Partitions', description: 'ATF-123-ROYAL-TEAK', text: 'High Quality | Long Lasting | Durable' },
+{ id: 69, category: 'Partitions', image: '/static/media/ATF-131-MARBLE-WHITE.356eaac85d798bddf311.jpg', title: 'Partitions', description: 'ATF-131-MARBLE-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 70, category: 'Partitions', image: '/static/media/ATF107-WALNUT.3ca18c7ecd18892ab423.jpg', title: 'Partitions', description: 'ATF107-WALNUT', text: 'High Quality | Long Lasting | Durable' },
+{ id: 71, category: 'Partitions', image: '/static/media/ATF132-AMAZONIAN-FOREST.9b43a3a222ba0dae2aa0.jpg', title: 'Partitions', description: 'ATF132-AMAZONIAN-FOREST', text: 'High Quality | Long Lasting | Durable' },
+{ id: 72, category: 'Partitions', image: '/static/media/ATF138-PEACON-TEAK.9efdee40c3bb2d18e158.jpg', title: 'Partitions', description: 'ATF138-PEACON-TEAK', text: 'High Quality | Long Lasting | Durable' },
+{ id: 73, category: 'Partitions', image: '/static/media/At01-BRIGHT-SILVER.0dbef2d9724046fba0de.jpg', title: 'Partitions', description: 'At01-BRIGHT-SILVER', text: 'High Quality | Long Lasting | Durable' },
+{ id: 74, category: 'Partitions', image: '/static/media/At05-PURE-WHITE.0ea0eeb3a60c09d794b6.jpg', title: 'Partitions', description: 'At05-PURE-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 75, category: 'Partitions', image: '/static/media/At08-RED.c9e5145ee2a3884b3cad.jpg', title: 'Partitions', description: 'At08-RED', text: 'High Quality | Long Lasting | Durable' },
+{ id: 76, category: 'Partitions', image: '/static/media/At10-SIGNAL-BLUE.a979bff5368413b9d9bb.jpg', title: 'Partitions', description: 'At10-SIGNAL-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 77, category: 'Partitions', image: '/static/media/At11-COPPER-METALLIC.ea912eb89dad103d9274.jpg', title: 'Partitions', description: 'At11-COPPER-METALLIC', text: 'High Quality | Long Lasting | Durable' },
+{ id: 78, category: 'Partitions', image: '/static/media/At18-NAVY-BLUE.876cc313babd11148642.jpg', title: 'Partitions', description: 'At18-NAVY-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 79, category: 'Partitions', image: '/static/media/At25-REFRESHING-ORANGE.0d182d0bac5e79d589fe.jpg', title: 'Partitions', description: 'At25-REFRESHING-ORANGE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 80, category: 'Partitions', image: '/static/media/At31-IVORY.cac84af7dfa1e2924dcd.jpg', title: 'Partitions', description: 'At31-IVORY', text: 'High Quality | Long Lasting | Durable' },
+{ id: 81, category: 'Partitions', image: '/static/media/At33-CHOCOLATE-BROWN.db420842b40fd56603d1.jpg', title: 'Partitions', description: 'At33-CHOCOLATE-BROWN', text: 'High Quality | Long Lasting | Durable' },
+
+
+];
+export default productData;

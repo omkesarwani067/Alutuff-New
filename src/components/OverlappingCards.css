@@ -1,0 +1,122 @@
+  .stack-section{
+     background: #000;
+      padding: 50px 0px;
+      margin: auto;
+  }
+.stack-section-card {
+  position: sticky;
+ top: 150 !important;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Increased gap between cards */
+}
+
+.card {
+  width: 100%;
+  height: 350px; /* Reduced height */
+  margin: auto;
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 150px;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+
+.overlap-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.overlap-card-img {
+  max-width: 45%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.overlap-cards-heading{
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(234, 49, 56, 1) 0%, rgba(0, 0, 0, 1) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+
+.overlap-card-text{
+  width: 50%;
+  font-size: 20px;
+}
+.card1 {
+  background-color: #ffffff;
+  
+}
+
+.card3 {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.lift {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 768px) {
+  .stack-section{
+    background: #000;
+      margin: auto;
+  }
+  .stack-section-card {
+ 
+max-width: 90% !important;
+  margin: auto;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px; /* Increased gap between cards */
+}
+
+  .card {
+  min-width: 100%;
+  height: auto !important; 
+  margin: auto;
+  top: 150px !important;
+
+}
+ .overlap-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  padding: 10px;
+}
+.overlap-card-img {
+  
+  max-width: 100% !important;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+.overlap-card-text{
+  width: 100%;
+}
+.overlap-cards-heading{
+  font-size: 18px;
+}
+.overlap-cards-text{
+  font-size: 15px;
+}
+}

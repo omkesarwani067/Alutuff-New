@@ -1,0 +1,118 @@
+.testimonial-section {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.testimonial-content-section {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.testimonial-left {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  text-align: center;
+}
+
+.quote-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.testimonial-left h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.testimonial-right {
+  flex: 2;
+  min-width: 250px;
+}
+
+.testimonial-box {
+  max-width: 275px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  padding: 10px 10px 40px 10px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-desc {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.testimonial-client {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: #f5f5f5;
+  padding: 6px 10px;
+  border-top-right-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial-client img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.testimonial-client span {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-content-section {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    gap: 0px;
+  }
+
+  .testimonial-left {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .testimonial-box {
+    min-width: 95%;
+    max-width: 90%;
+    height: 200px;
+    padding-top: 15px !important;
+    padding: 10px;
+    margin: auto !important;
+  }
+
+  /* ⭐️ Center the testimonial box inside each slick slide */
+  .testimonial-right .slick-slide > div {
+    display: flex !important;
+    justify-content: center;
+  }
+}

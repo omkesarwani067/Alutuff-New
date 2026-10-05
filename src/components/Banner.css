@@ -1,0 +1,51 @@
+  .banner-fluid-section {
+    height: 360px; /* or less, adjust for your needs */
+    background-size: cover; /* not 100% 100% */
+    background-position:center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+
+.banner-content-div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.banner-text {
+  color: white;
+  max-width: 350px;
+  text-align: left;
+
+}
+
+.banner-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .banner-fluid-section {
+    height: 100%;
+    min-width: 100% !important; 
+    padding: 15% 0px !important;
+    background-size: cover; 
+    background-position: cover !important;
+    background-repeat: no-repeat;
+   margin: 0 !important;
+  
+  }
+  .banner-heading {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0;
+}
+.banner-text {
+  color: white;
+  max-width: 80%;
+  text-align: left;
+}
+
+}

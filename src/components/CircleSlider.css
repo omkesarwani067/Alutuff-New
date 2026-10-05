@@ -1,0 +1,112 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.circle-slider-wrapper {
+  margin-top: 6.2%;
+  position: relative;
+  padding: 10px;
+  background: #ffffff;
+  overflow: hidden;
+  height: 480px; /* Increased to accommodate description box */
+}
+
+.circle {
+  padding: 15px;
+  width: 170px;
+  height: 170px;
+  background: rgba(211, 211, 211, 0.119);
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.core-icons {
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+}
+
+.core-circle-descp {
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.circle-slider .circle-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.circle h4 {
+  margin: 0px;
+  font-size: 18px;
+  color: #333;
+}
+
+.circle-item.active .circle {
+  border-color: red;
+  transform: scale(1.05);
+}
+
+/* Hover Description Box Styling */
+.below-description {
+  position: absolute;
+ 
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px;
+  width: 90%;
+  background: white;
+  padding: 20px;
+  border-left: 6px solid red;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #111 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .circle-slider-wrapper {
+    margin-top: 6.5%;
+    height: 100%;
+  }
+
+  .circle-slider {
+    padding: 0px;
+    margin: 0;
+  }
+
+  .below-description {
+    display: none;
+  }
+
+  .circle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .core-icons {
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+  }
+    .circle-item:hover .core-circle-descp {
+    display: none !important;
+  }
+}
